@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-color: burlywood;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 5px;
+    background:  transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background-color: orange;
+    padding: 16px 50px;
+    font-size: 16px;
+}
+#todo{
+    background-color: rgb(149, 124, 124);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    /* margin: 100px auto 20px; */
+    padding: 40px 30px 70px;
+}
+img{
+    width: 30px;
+    margin-left: 10px;
+    height: 20px;
+}
+h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#input{
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 40px;
+    /* justify-content: space-between; */
+    padding-left:20px ;
+    margin-bottom: 25px;
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 7px 8px 12px 20px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    /* line-height: 50px; */
+}
+ ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    /* line-height: 40px; */
+    top: 5px;
+    left: -15px;
+ }
+
+ ul li.checked{
+    text-decoration: line-through;
+ }
+ ul li.checked::before{
+    background-image: url(checked.png);
+ }
+ ul li span{
+    height: 30px;
+    width: 30px;
+    font-size: 22px;
+    position: absolute;
+    right:0;
+    top: 2px;
+    background-color: rgb(197, 181, 181);
+    text-align: center;
+    border-radius: 50%; 
+    line-height: 25px;
+ }
+ ul li span:hover{
+    background-color: rgb(174, 152, 152);
+ }
